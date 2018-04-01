@@ -1,8 +1,8 @@
 version: "3.1"
 services:
   stormy_files:
-    image: debian:stretch-slim
-    command: bash -c "apt-get -y update && apt-get -y install python3 && cd /files && python3 -m http.server 8081"
+    image: python:3.6
+    command: bash -c "cd /files && python3 -m http.server 8081"
     volumes:
       - "./files:/files"
     ports:
