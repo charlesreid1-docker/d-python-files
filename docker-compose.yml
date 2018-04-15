@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   stormy_files:
-    image: python:3.6
+    image: jfloff/alpine-python:recent-onbuild
     command: bash -c "cd /files && python3 -m http.server 8081"
     volumes:
       - "./files:/files"
