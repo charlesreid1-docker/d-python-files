@@ -13,5 +13,6 @@ Users send requests to `files.charlesreid1.X/file`
 and they are rewritten on the backend to 
 `127.0.0.1:8081/file`.
 
-This uses `debian:stretch-slim` (same as [nginx Dockerfile](https://github.com/nginxinc/docker-nginx/blob/4f5bae5928baee89433ecb20a50283546f217dfa/mainline/stretch/Dockerfile)).
+This uses `jfloff/alpine-python:recent` 
+(see [jflof/alpine-python](https://github.com/jfloff/alpine-python)).
 
