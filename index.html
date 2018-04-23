@@ -216,15 +216,16 @@
                 
                 
                 <h1 id="d-python-files">d-python-files</h1>
-<p>simple lightweight python files server.</p>
-<pre><code>python3 -m http.simple -b 127.0.0.1 -p 8081
+<p>This container runs a simple lightweight Python 
+HTTP file server for files.charlesreid1.com.</p>
+<p>Here's the one-liner:</p>
+<pre><code>python3 -m http.simple -b &lt;docker-ip&gt; -p &lt;port&gt;
 </code></pre>
 
-<p>This listens for local requests on port 8081.</p>
-<p>This service is reverse-proxied by nginx.
-Users send requests to <code>files.charlesreid1.X/file</code>
-and they are rewritten on the backend to 
-<code>127.0.0.1:8081/file</code>.</p>
+<p>This binds to the docker network and listens for requests on a port.
+Requests for files.charlesreid1.com are reverse-proxied by the nginx 
+frontend (see <a href="https://git.charlesreid1.com/docker/d-nginx-charlesreid1">d-nginx-charlesreid1</a>)
+and passed along to the internal docker network.</p>
 <p>This uses <code>jfloff/alpine-python:recent</code> 
 (see <a href="https://github.com/jfloff/alpine-python">jflof/alpine-python</a>).</p>
                 
