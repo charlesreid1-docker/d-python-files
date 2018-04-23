@@ -1,17 +1,18 @@
 # d-python-files
 
-simple lightweight python files server.
+This container runs a simple lightweight Python 
+HTTP file server for files.charlesreid1.com.
+
+Here's the one-liner:
 
 ```
-python3 -m http.simple -b 127.0.0.1 -p 8081
+python3 -m http.simple -b <docker-ip> -p <port>
 ```
 
-This listens for local requests on port 8081.
-
-This service is reverse-proxied by nginx.
-Users send requests to `files.charlesreid1.X/file`
-and they are rewritten on the backend to 
-`127.0.0.1:8081/file`.
+This binds to the docker network and listens for requests on a port.
+Requests for files.charlesreid1.com are reverse-proxied by the nginx 
+frontend (see [d-nginx-charlesreid1](https://git.charlesreid1.com/docker/d-nginx-charlesreid1))
+and passed along to the internal docker network.
 
 This uses `jfloff/alpine-python:recent` 
 (see [jflof/alpine-python](https://github.com/jfloff/alpine-python)).
