@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "d-python-files\n\n\nThis container runs a simple lightweight Python \nHTTP file server for files.charlesreid1.com.\n\n\nHere's the one-liner:\n\n\npython3 -m http.simple -b <docker-ip> -p <port>\n\n\n\n\nThis binds to the docker network and listens for requests on a port.\nRequests for files.charlesreid1.com are reverse-proxied by the nginx \nfrontend (see \nd-nginx-charlesreid1\n)\nand passed along to the internal docker network.\n\n\nThis uses \njfloff/alpine-python:recent\n \n(see \njflof/alpine-python\n).",
+            "text": "d-python-files\n\u00b6\n\n\nThis container runs a simple lightweight Python \nHTTP file server for files.charlesreid1.com.\n\n\nHere's the one-liner:\n\n\npython3 -m http.simple -b <docker-ip> -p <port>\n\n\n\n\n\nThis binds to the docker network and listens for requests on a port.\nRequests for files.charlesreid1.com are reverse-proxied by the nginx \nfrontend (see \nd-nginx-charlesreid1\n)\nand passed along to the internal docker network.\n\n\nThis uses \njfloff/alpine-python:recent\n \n(see \njflof/alpine-python\n).",
             "title": "Home"
         },
         {
